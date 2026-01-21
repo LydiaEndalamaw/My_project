@@ -1,35 +1,19 @@
 # My Projects
 
-This repository contains my personal software projects, developed as part of my coursework and practice.
-
----
-
-## Projects
-
-### 1. Online Shop Project
+### 1. Online Shop Project 🛒
 - **Folder:** `OnlineShop_Project`
-- **Course / Assignment:** Advanced Programming / Java-2
-- **Description:** E-commerce website for online shopping.
-- **Contribution:** Frontend/UI development, product listing pages, and styling.
+- **Description:** An e-commerce website for online shopping. It includes product listings, cart functionality, and basic user interactions.
 
-### 2. JavaFX Car Rental System
+### 2. JavaFX Car Rental System 🚗
 - **Folder:** `JavaFX_CarRentalSystem`
-- **Course / Assignment:** Advanced Programming / Java-2
-- **Description:** Desktop application for car rental management.
-- **Contribution:** JavaFX frontend, user interface design, and form handling.
+- **Course/Assignment:** Advanced Programming / Java-2
+- **Description:** A JavaFX-based car rental management system developed as a group assignment. Features include car listing, image upload, customer management, and rental tracking.
+- **My Contribution:** Frontend / UI development.
 
-### 3. Hotel Booking Website
+### 3. Hotel Booking Website 🏨
 - **Folder:** `HotelBooking_Website`
-- **Course / Assignment:** Advanced Programming / Java-2
-- **Description:** Website for booking hotel rooms.
-- **Contribution:** Frontend/UI pages and layout design.
+- **Description:** A hotel booking website that allows users to view hotels, check availability, and book rooms.
 
-### 4. Tour Website
+### 4. Tour Website 🌍
 - **Folder:** `TourWebsite_Project`
-- **Course / Assignment:** Advanced Programming / Java-2
-- **Description:** Website showcasing tour packages and travel information.
-- **Contribution:** Frontend development and visual design.
-
----
-
-*All projects reflect my skills in frontend/UI design, Java programming, and web development.*
+- **Description:** A tour agency website showcasing Lake Tana, Bahir Dar, and other historical and tourist attractions like Tisabay. The site includes information about tours, itineraries, and booking options.
