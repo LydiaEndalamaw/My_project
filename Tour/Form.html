@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tour Registration Form</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+   <link rel="stylesheet" href="li.css">
+</head>
+<body>
+ <header class="main-header">
+        <nav class="main-nav">
+            <a href="home.html"><i class="fa-solid fa-house"></i> Home</a>
+            <a href="newm.html"><i class="fa-solid fa-map-marked-alt"></i> Tour Packages</a>
+            <a href="Form.html"><i class="fa-solid fa-user-plus"></i> Register</a>
+        </nav>
+    </header>
+
+  <div class="form-container" role="main">
+    <h2><i class="fas fa-user-plus"></i> Register for a Tour</h2>
+    <form action="submit-form.php" method="POST" novalidate>
+      <div class="form-group">
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" name="fullname" required autocomplete="name" />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required autocomplete="email" />
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" required autocomplete="tel" />
+      </div>
+
+      <div class="form-group">
+        <label for="package">Select Tour Package</label>
+        <select id="package" name="package" required>
+          <option value="" disabled selected>-- Choose a Package --</option>
+          <option value="lake-tana">Lake Tana Tour</option>
+          <option value="blue-nile-falls">Blue Nile Falls</option>
+          <option value="monastery-islands">Monastery Islands</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="people">Number of People</label>
+        <input type="number" id="people" name="people" min="1" required />
+      </div>
+
+      <div class="form-group">
+        <label for="date">Date of Travel</label>
+        <input type="date" id="date" name="date" required />
+      </div>
+
+      <button type="submit">
+        <i class="fas fa-paper-plane"></i> Submit Registration
+      </button>
+    </form>
+  </div>
+</body>
+</html>

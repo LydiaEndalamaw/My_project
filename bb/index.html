@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloth Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="hero">
+        <h1>Welcome to Li's Cloth Shop</h1>
+        <p>Discover the latest fashion trends</p>
+        <button class="btn" onclick="window.location.href='list.html'">Shop Now</button>
+    </div>
+
+    <footer>
+    
+    </footer>
+    <script>
+    // Example: Increase cart count when Add to Cart is clicked
+    const buttons = document.querySelectorAll('.btn');
+    const cartCount = document.getElementById('cart-count');
+
+    let count = 0;
+
+    buttons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault(); // prevent default link behavior
+            count++;
+            cartCount.textContent = count;
+            alert('Item added to cart!');
+        });
+    });
+</script>
+
+
+</body>
+</html>

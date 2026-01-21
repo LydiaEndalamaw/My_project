@@ -1,0 +1,158 @@
+
+.sidebar{
+-fx-background-color: #CFDADC;
+-fx-background-radius: 10;
+
+
+}
+.pane{
+-fx-background-color: #cdcdcd;
+
+}
+.rightpane{
+-fx-background-color: #cdcdcd;
+-fx-background-radius: 10;
+}
+/* .nav-btn{
+ -fx-background-color:transparent;
+-fx-border-color: whitesmoke;
+
+
+} */
+.nav{
+-fx-background-color: #cdcdcd;
+-fx-background-radius: 30;
+}
+.searchbar{
+-fx-background-color: whitesmoke;
+-fx-background-radius: 20;
+}
+.scrollbar{
+-fx-background-radius: 20;
+
+}
+.titlebar{
+    -fx-background-color: #574d4d;
+    -fx-border-color: rgb(117, 105, 105);
+}
+.scrollpane{
+    -fx-background-color: transparent;
+    -fx-border-color: rgb(255, 255, 255);
+
+}
+.transparent{
+    -fx-background-color: transparent;
+}
+.carrentalcard{
+
+-fx-background-color: #cdcdcd;
+-fx-background-radius: 10;
+
+
+}
+
+.carrentalpane{
+
+-fx-background-color: #cdcdcd;
+-fx-background-radius: 20;
+}
+.sidebuttons:hover{
+-fx-border-color: black;
+-fx-border-width: 0 0 0 10;
+-fx-background-color: whitesmoke;
+
+}
+.overlaybutton{
+-fx-background-color: transparent;
+}
+.carrentalfields{
+-fx-background-color: whitesmoke;
+-fx-background-radius: 11;
+
+}
+.rentbtn{
+-fx-background-radius: 20;
+-fx-background-color: rgb(59, 144, 255);
+
+}
+.availablepane{
+-fx-background-radius: 13 13 0 0;
+
+}
+
+.addbtn{
+    -fx-background-radius: 20;
+-fx-background-color: rgb(255, 90, 39);
+
+}
+.buttons:hover{
+  
+    -fx-scale-x: 1.111;
+
+}
+.importbtn{
+    -fx-background-color: rgb(137, 137, 233);
+   
+
+}
+.insertbtn{
+    -fx-background-color: rgb(255, 212, 56);
+    -fx-background-radius: 20;
+}
+.deletebtn{
+    -fx-background-color: rgb(255, 90, 39);
+    -fx-background-radius: 20;
+
+}
+.reportbtn{
+    -fx-background-color: rgb(255, 253, 115);
+    -fx-background-radius: 20;
+
+}
+.updatebtn{
+    -fx-background-color: rgb(147, 238, 97);
+    -fx-background-radius: 20;
+
+}
+.clearbtn{
+    -fx-background-color: rgb(76, 200, 245);
+    -fx-background-radius: 20;
+
+}
+
+.sidebuttons{
+    /* -fx-background-color:transparent; */
+    -fx-border-color: whitesmoke;
+}
+.activebtn{
+    -fx-border-color: black;
+    -fx-border-width: 0 0 0 10;
+    -fx-background-color: whitesmoke;
+
+}
+
+.table-columns{
+
+-fx-background-color: #cdcdcd;
+
+-fx-font-size: 14;
+
+}
+
+
+.table-column1{
+
+ -fx-background-radius: 15 0 0 0;
+
+}
+
+.table-column2{
+
+ -fx-background-radius: 0 15 0 0;
+
+}
+.table-main{
+
+-fx-background-radius: 20;
+
+}

@@ -1,0 +1,23 @@
+
+
+.background{
+-fx-background-color: linear-gradient(to right,blue,red);
+-fx-background-color: linear-gradient(
+    45deg,
+    hsl(60deg 20% 91%) 0%,
+    hsl(79deg 18% 88%) 8%,
+    hsl(100deg 16% 84%) 17%,
+    hsl(125deg 14% 81%) 25%,
+    hsl(145deg 17% 77%) 33%,
+    hsl(159deg 19% 73%) 42%,
+    hsl(169deg 20% 69%) 50%,
+    hsl(178deg 21% 64%) 58%,
+    hsl(186deg 23% 61%) 67%,
+    hsl(192deg 26% 59%) 75%,
+    hsl(197deg 27% 57%) 83%,
+    hsl(202deg 28% 55%) 92%,
+    hsl(208deg 27% 54%) 100%
+  );
+-fx-background-color: radial-gradient(circle, rgba(197,219,245,1) 0%, rgba(242,247,238,1) 86%);
+}
+.sidebar{-fx-background-color: #CFDADC;}

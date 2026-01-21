@@ -1,0 +1,50 @@
+.login{
+   -fx-background-color: rgba(255, 255, 255, 0.808);
+   -fx-border-radius: 20;
+   -fx-background-radius: 15;
+   -fx-border-color:grey;
+
+}
+.loginWindow{
+-fx-background-image: url(../icons/amg.jpg);
+-fx-background-position: center;
+-fx-background-radius: 20;
+-fx-background-radius: 10;
+}
+
+.account{
+
+    -fx-text-alignment: center}
+.sign_up{
+    -fx-background-color: rgb(128, 140, 211);
+    -fx-color: white;
+    -fx-background-radius: 10;
+}
+.fileds{
+    -fx-background-color: transparent;
+    -fx-border-color: rgba(14, 13, 13, 0.644);
+    -fx-border-width: 0px 0px 3px 0px;
+    -fx-font-size: 14;
+   
+    
+
+
+}
+.privelage{
+    -fx-background-color: transparent;
+    -fx-border-color: rgba(17, 16, 16, 0.774);
+    -fx-border-width: 0px 0px 3px 0px;
+}
+.loginbtn{
+    -fx-background-color: transparent;
+
+}
+.buttons:hover{
+
+    -fx-scale-x: 1.111;
+    
+
+}
+.buttons{
+    -fx-background-color: transparent;
+}

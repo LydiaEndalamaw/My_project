@@ -1,0 +1,24 @@
+.card{
+    
+    -fx-border-color: rgb(153, 145, 145);
+    /* -fx-border-color: rgb(223, 220, 220); */
+    -fx-background-radius: 20;
+    -fx-background-color: transparent;
+
+
+}
+.img{
+    -fx-background-radius: 20;
+}
+.curved{
+    -fx-background-radius: 20;
+    -fx-background-color: transparent;
+}
+.button{
+    -fx-background-radius: 20;
+    -fx-background-color: rgb(139, 139, 225);
+    
+}
+.button:hover{
+    -fx-scale-x: 1.111;
+}

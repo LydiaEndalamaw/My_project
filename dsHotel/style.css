@@ -1,0 +1,202 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+  }
+  
+  /* Header */
+  header {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  header h1 {
+    font-size: 3rem;
+  }
+  
+  header p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+  }
+  
+  /* Navigation */
+  nav {
+    background-color: #00509e;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+  }
+  
+  nav a {
+    color: white;
+    padding: 1rem;
+    text-decoration: none;
+    font-size: 1.1rem;
+  }
+  
+  nav a:hover {
+    background-color: #003f7f;
+    border-radius: 5px;
+  }
+  
+  /* Home Section */
+  #home {
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .room-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 2rem;
+  }
+  
+  .room-gallery img {
+    width: 250px;
+    height: 150px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .room-gallery img:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Book Section */
+  #book form {
+    max-width: 500px;
+    margin: auto;
+    background-color: white;
+    padding: 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  #book label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  
+  #book input, #book select {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1.2rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  #book button {
+    padding: 1rem 2rem;
+    background-color: #003366;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+  }
+  
+  #book button:hover {
+    background-color: #00509e;
+  }
+  
+  /* Services Section */
+  #services {
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  #services ul {
+    list-style-type: none;
+    margin-top: 1rem;
+  }
+  
+  #services li {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+  }
+  .services h2{
+    text-align: center;
+  }
+  
+  .category {
+    margin-bottom: 2rem;
+    text-align: left;
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .category h3 {
+    font-size: 1.8rem;
+    color: #003366;
+    margin-bottom: 1rem;
+  }
+  
+  .category ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .category li {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    color: #666;
+  }
+  
+  .category li::before {
+    content: "• ";
+    color: #003366;
+    margin-right: 10px;
+  }
+  
+  hr {
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 2rem 0;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .services {
+      padding: 1.5rem;
+      margin: 1rem;
+    }
+  
+    header h1 {
+      font-size: 2.5rem;
+    }
+  
+    header p {
+      font-size: 1rem;
+    }
+  
+    nav a {
+      font-size: 1rem;
+    }
+  
+    .category h3 {
+      font-size: 1.5rem;
+    }
+  
+    .category li {
+      font-size: 1rem;
+    }
+  }
+  .category li::before {
+ content: "★ "; 
+ color: gold; 
+ }
+  
+ 

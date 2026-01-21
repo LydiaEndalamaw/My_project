@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloth Shop - Products</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        table {
+            width: 100%;
+            border-spacing: 20px;
+        }
+
+        .box {
+            background: white;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .box:hover {
+            transform: scale(1.05);
+        }
+
+        .box img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .box h3 {
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .box p {
+            margin: 5px 0;
+            color: #777;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #ff7b00;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            background: #e56d00;
+        }
+
+        .back {
+            margin-top: 20px;
+            display: block;
+            text-align: center;
+            font-size: 1.2em;
+            color: #ff7b00;
+            text-decoration: none;
+        }
+    </style>
+    <header style="display:flex; justify-content: space-between; align-items: center; padding: 10px 20px; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1); border-radius: 0 0 10px 10px;">
+    <h2>Cloth Shop</h2>
+    <a href="cart.html" style="text-decoration: none; color: #ff7b00; font-weight: bold; display: flex; align-items: center;">
+        🛒 Cart <span id="cart-count" style="background:#ff7b00; color:#fff; border-radius:50%; padding:2px 6px; margin-left:5px;">0</span>
+    </a>
+</header>
+
+</head>
+<body>
+
+<h1>Our Latest Collections</h1>
+
+<table>
+    <h2>for Women</h2>
+    <tr>
+        <td>
+            <div class="box">
+                <img src="9c05b86c557cd947b085c78172b596db.jpg" alt="Dress">
+                <h3>Elegant Dress</h3>
+                <p>$25</p>
+                <a href="#" class="btn">Add to Cart</a>
+            </div>
+        </td>
+
+        <td>
+            <div class="box">
+                <img src="girljac.jpg" alt="Jacket">
+                <h3>Stylish Jacket</h3>
+                <p>$40</p>
+                <a href="#" class="btn">Add to Cart</a>
+            </div>
+        </td>
+
+        <td>
+            <div class="box">
+                <img src="bag.jpg" alt="Shirt">
+                <h3>women's Bag
+                </h3>
+                <p>$18</p>
+                <a href="#" class="btn">Add to Cart</a>
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <div class="box">
+                <img src="fluralsk.jpg" alt="Skirt">
+                <h3>Floral Skirt</h3>
+                <p>$20</p>
+                <a href="#" class="btn">Add to Cart</a>
+            </div>
+        </td>
+
+        <td>
+            <div class="box">
+                <img src="classcwomen.jpg" alt="Traditional Dress">
+                <h3>Classic Women's Wear</h3>
+                <p>$30</p>
+                <a href="#" class="btn">Add to Cart</a>
+            </div>
+        </td>
+
+        <td>
+            <div class="box">
+                <img src="sho.jpg" alt="Shoes">
+                <h3>Casual Shoes</h3>
+                <p>$22</p>
+                <a href="#" class="btn">Add to Cart</a>
+            </div>
+        </td>
+    </tr>
+    </table>
+    <table>
+        <h2>for men</h2>
+        <div>
+    
+     <tr>
+        <td>
+            <div class="box">
+                <img src="mensco.jpg" alt="Dress">
+                <h3>Men's collaction</h3>
+                <p>$25</p>
+                <a href="#" class="btn">Add to Cart</a>
+            </div>
+        </td>
+
+        <td>
+            <div class="box">
+                <img src="3f1f1a8a2d790e283a8c0d0101d714cc.jpg" alt="Jacket">
+                <h3>Stylish Jacket</h3>
+                <p>$40</p>
+                <a href="#" class="btn">Add to Cart</a>
+            </div>
+        </td>
+
+        <td>
+            <div class="box">
+                <img src="ment.jpg" alt="Shirt">
+                <h3>Men's Shirt</h3>
+                <p>$18</p>
+                <a href="#" class="btn">Add to Cart</a>
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <div class="box">
+                <img src="mebag.jpg" alt="Skirt">
+                <h3>Bags</h3>
+                <p>$20</p>
+                <a href="#" class="btn">Add to Cart</a>
+            </div>
+        </td>
+
+        <td>
+            <div class="box">
+                <img src="watch.jpg" alt="Traditional Dress">
+                <h3>Luxury watches</h3>
+                <p>$30</p>
+                <a href="#" class="btn">Add to Cart</a>
+            </div>
+        </td>
+
+        <td>
+            <div class="box">
+                <img src="ssho.jpg" alt="Shoes">
+                <h3>Shoes</h3>
+                <p>$22</p>
+                <a href="#" class="btn">Add to Cart</a>
+            </div>
+        </td>
+    </tr>
+    </div>
+</table>
+
+<a href="index.html" class="back">← Back to Home</a>
+<a href="contact.html" class="back">Contact us ->  </a>
+
+</body>
+</html>

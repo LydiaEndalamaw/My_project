@@ -1,0 +1,621 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="600.0" minWidth="900.0" prefHeight="755.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
+   <left>
+      <VBox prefHeight="710.0" prefWidth="267.0" styleClass="pane" stylesheets="@../styles/dashboard.css" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER" prefHeight="187.0" prefWidth="286.0">
+               <children>
+                  <ImageView fitHeight="92.0" fitWidth="124.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/profile-user.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="system_user" text="User">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <Button fx:id="home_btn" mnemonicParsing="false" onAction="#switchPanels" prefHeight="100.0" prefWidth="267.0" styleClass="transparent">
+               <graphic>
+                  <HBox fx:id="home" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" stylesheets="@../styles/dashboard.css">
+                     <children>
+                        <ImageView fitHeight="50.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/home.png" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="34.0" prefWidth="74.0" text="Home">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <styleClass>
+                        <String fx:value="sidebuttons" />
+                        <String fx:value="activebtn" />
+                     </styleClass>
+                  </HBox>
+               </graphic>
+            </Button>
+            <Button fx:id="cars_btn" mnemonicParsing="false" onAction="#switchPanels" prefHeight="100.0" prefWidth="267.0" styleClass="transparent">
+               <graphic>
+                  <HBox fx:id="cars" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" styleClass="sidebuttons" stylesheets="@../styles/dashboard.css">
+                     <children>
+                        <ImageView fitHeight="66.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/car.png" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="34.0" prefWidth="74.0" text="Cars">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </graphic>
+            </Button>
+            <Button fx:id="carrental_btn" mnemonicParsing="false" onAction="#switchPanels" prefHeight="100.0" prefWidth="267.0" styleClass="transparent">
+               <graphic>
+                  <HBox fx:id="rentals" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" styleClass="sidebuttons" stylesheets="@../styles/dashboard.css">
+                     <children>
+                        <ImageView fitHeight="62.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/vehicle.png" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="34.0" prefWidth="74.0" text="Cars">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </graphic>
+            </Button>
+            <Button fx:id="customers_btn" mnemonicParsing="false" onAction="#switchPanels" prefHeight="100.0" prefWidth="267.0" styleClass="transparent">
+               <graphic>
+                  <HBox fx:id="customers" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="6.0" styleClass="sidebuttons" stylesheets="@../styles/dashboard.css">
+                     <children>
+                        <ImageView fitHeight="66.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/customer-pic.png" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="34.0" prefWidth="110.0" text="Customers">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </graphic>
+            </Button>
+            <Button fx:id="logout_btn" mnemonicParsing="false" onAction="#handle_logout" prefHeight="52.0" prefWidth="264.0" styleClass="transparent" stylesheets="@../styles/dashboard.css" translateY="60.0">
+               <graphic>
+                  <HBox alignment="BOTTOM_CENTER" prefHeight="44.0" prefWidth="190.0" spacing="10.0" styleClass="buttons" stylesheets="@../styles/dashboard.css">
+                     <children>
+                        <ImageView fitHeight="44.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/log-out_10024508.png" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="TOP_LEFT" prefHeight="41.0" prefWidth="98.0" text="Logout">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </graphic>
+            </Button>
+            <Button fx:id="logout_btn" mnemonicParsing="false" prefHeight="50.0" prefWidth="267.0" styleClass="transparent" translateY="60.0" />
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <AnchorPane prefHeight="710.0" prefWidth="1081.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane fx:id="home_panel" layoutX="-30.0" layoutY="8.0" prefHeight="710.0" prefWidth="1043.0" visible="false" AnchorPane.bottomAnchor="-8.0" AnchorPane.leftAnchor="-30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="8.0">
+               <children>
+                  <HBox layoutX="173.0" layoutY="369.0" prefHeight="268.0" prefWidth="879.0" spacing="50.0">
+                     <children>
+                        <AnchorPane prefHeight="126.0" prefWidth="242.0">
+                           <children>
+                              <VBox alignment="CENTER" layoutX="76.0" layoutY="-16.0" prefHeight="246.0" prefWidth="242.0" styleClass="nav" stylesheets="@../styles/dashboard.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <ImageView fitHeight="150.0" fitWidth="242.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../icons/cardb.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label prefHeight="21.0" prefWidth="105.0" text="Available Cars">
+                                       <font>
+                                          <Font name="Tahoma" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="dashboard_car" alignment="CENTER" prefHeight="21.0" prefWidth="155.0" text="0">
+                                       <font>
+                                          <Font name="Arial Bold" size="26.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="126.0" prefWidth="242.0">
+                           <children>
+                              <VBox alignment="CENTER" layoutX="76.0" layoutY="-16.0" prefHeight="246.0" prefWidth="242.0" styleClass="nav" stylesheets="@../styles/dashboard.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <ImageView fitHeight="150.0" fitWidth="242.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../icons/money.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label prefHeight="0.0" prefWidth="93.0" text="Total income">
+                                       <font>
+                                          <Font name="Tahoma" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="dashboard_income" alignment="CENTER" prefHeight="21.0" prefWidth="155.0" text="0">
+                                       <font>
+                                          <Font name="Arial Bold" size="26.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="126.0" prefWidth="242.0">
+                           <children>
+                              <VBox alignment="CENTER" layoutX="76.0" layoutY="-16.0" prefHeight="246.0" prefWidth="242.0" styleClass="nav" stylesheets="@../styles/dashboard.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <ImageView fitHeight="150.0" fitWidth="242.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../icons/customer-pic.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label prefHeight="21.0" prefWidth="133.0" text="Total customers">
+                                       <font>
+                                          <Font name="Tahoma" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="dashboard_customers" alignment="CENTER" prefHeight="21.0" prefWidth="155.0" text="0">
+                                       <font>
+                                          <Font name="Arial Bold" size="26.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </HBox>
+                  <Label layoutX="376.0" layoutY="199.0" prefHeight="81.0" prefWidth="332.0" text="DASHBOARD">
+                     <font>
+                        <Font name="Franklin Gothic Medium" size="55.0" />
+                     </font>
+                  </Label>
+                  <AnchorPane layoutX="59.0" layoutY="10.0" prefHeight="135.0" prefWidth="1050.0" styleClass="nav" stylesheets="@../styles/dashboard.css">
+                     <children>
+                        <ImageView fitHeight="130.0" fitWidth="240.0" layoutX="788.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/logofalcon.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="cars_panel" prefHeight="710.0" prefWidth="1109.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <VBox layoutX="753.0" layoutY="4.0" prefHeight="688.0" prefWidth="336.0" styleClass="rightpane" stylesheets="@../styles/dashboard.css" translateY="10.0">
+                     <children>
+                        <VBox alignment="CENTER_RIGHT" prefHeight="233.0" prefWidth="336.0" style="-fx-background-radius: 10 10 10 10;" translateX="-21.0">
+                           <children>
+                              <VBox alignment="CENTER" fillWidth="false" maxWidth="210.0" prefHeight="145.0" prefWidth="210.0" spacing="5.0" style="-fx-background-color: white;" translateY="5.0">
+                                 <children>
+                                    <ImageView fx:id="car_image" fitHeight="150.0" fitWidth="210.0" pickOnBounds="true" preserveRatio="true" />
+                                 </children>
+                              </VBox>
+                              <Button fx:id="car_import_image" mnemonicParsing="false" onAction="#handleUpload" prefHeight="44.0" prefWidth="210.0" styleClass="importbtn" text="Import">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Button>
+                           </children></VBox>
+                        <HBox alignment="CENTER" prefHeight="65.0" prefWidth="336.0">
+                           <children>
+                              <Label text="Car ID:">
+                                 <font>
+                                    <Font name="Tahoma" size="22.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="car_id" prefHeight="33.0" prefWidth="196.0" promptText="Enter car Id(plate number)" styleClass="carrentalfields" stylesheets="@../styles/dashboard.css" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="68.0" prefWidth="336.0" spacing="5.0">
+                           <children>
+                              <Label text="Brand:">
+                                 <font>
+                                    <Font name="Tahoma" size="22.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="car_brand" prefHeight="33.0" prefWidth="200.0" promptText="Car brand" styleClass="carrentalfields" stylesheets="@../styles/dashboard.css" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="71.0" prefWidth="336.0" spacing="5.0">
+                           <children>
+                              <Label text="Model:">
+                                 <font>
+                                    <Font name="Tahoma" size="22.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="car_model" prefHeight="33.0" prefWidth="204.0" promptText="Car model" styleClass="carrentalfields" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="67.0" prefWidth="336.0" spacing="25.0">
+                           <children>
+                              <Label text="Price:">
+                                 <font>
+                                    <Font name="Tahoma" size="22.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="car_price" prefHeight="33.0" prefWidth="201.0" promptText="Car Price" styleClass="carrentalfields" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="58.0" prefWidth="324.0">
+                           <children>
+                              <Label prefHeight="25.0" prefWidth="87.0" text="Category:">
+                                 <font>
+                                    <Font name="Tahoma" size="18.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="car_category" prefHeight="33.0" prefWidth="192.0" promptText="Select car category" styleClass="carrentalfields" />
+                           </children></HBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="86.0" prefWidth="324.0" spacing="10.0">
+                                 <children>
+                                    <Label text="Status">
+                                       <font>
+                                          <Font name="Tahoma" size="22.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="car_status" prefHeight="33.0" prefWidth="196.0" promptText="Select car status" styleClass="carrentalfields" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="101.0" prefWidth="324.0" spacing="10.0" translateX="-4.0">
+                                 <children>
+                                    <Button fx:id="car_update" mnemonicParsing="false" onAction="#carUpdate" prefHeight="43.0" prefWidth="140.0" text="Update">
+                                       <styleClass>
+                                          <String fx:value="updatebtn" />
+                                          <String fx:value="buttons" />
+                                       </styleClass>
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font></Button>
+                                    <Button fx:id="car_insert" mnemonicParsing="false" onAction="#insert_cars" prefHeight="43.0" prefWidth="140.0" text="Insert">
+                                       <styleClass>
+                                          <String fx:value="insertbtn" />
+                                          <String fx:value="buttons" />
+                                       </styleClass>
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font></Button>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" translateX="-4.0">
+                                 <children>
+                                    <Button fx:id="car_clear" mnemonicParsing="false" onAction="#clearCarFields" prefHeight="43.0" prefWidth="140.0" text="Clear">
+                                       <styleClass>
+                                          <String fx:value="clearbtn" />
+                                          <String fx:value="buttons" />
+                                       </styleClass>
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font></Button>
+                                    <Button fx:id="car_delete" mnemonicParsing="false" onAction="#delete_cars" prefHeight="43.0" prefWidth="140.0" text="Delete">
+                                       <styleClass>
+                                          <String fx:value="deletebtn" />
+                                          <String fx:value="buttons" />
+                                       </styleClass>
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font></Button>
+                                 </children>
+                              </HBox>
+                           </children></VBox>
+                     </children></VBox>
+                  <ScrollPane layoutX="21.0" layoutY="100.0" prefHeight="594.0" prefWidth="718.0" translateY="10.0">
+                     <content>
+                        <VBox fx:id="scrollbody" alignment="TOP_CENTER" prefHeight="524.0" prefWidth="701.0" spacing="10.0" styleClass="scrollpane" stylesheets="@../styles/dashboard.css" translateY="12.0">
+                           <children>
+                              <HBox alignment="CENTER_RIGHT" prefHeight="0.0" prefWidth="699.0" spacing="10.0" />
+                           </children></VBox>
+                     </content></ScrollPane>
+                  <AnchorPane layoutX="18.0" layoutY="14.0" prefHeight="75.0" prefWidth="700.0" styleClass="nav" stylesheets="@../styles/dashboard.css">
+                     <children>
+                        <TextField fx:id="car_search" layoutX="29.0" layoutY="18.0" prefHeight="41.0" prefWidth="579.0" promptText="Search any car" styleClass="searchbar" stylesheets="@../styles/dashboard.css">
+                           <font>
+                              <Font size="18.0" />
+                           </font></TextField>
+                        <Button layoutX="613.0" layoutY="15.0" mnemonicParsing="false" onAction="#carSearch" prefHeight="42.0" prefWidth="44.0" stylesheets="@../styles/dashboard.css">
+                           <graphic>
+                              <ImageView fitHeight="42.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icons/magnifying-glass.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="buttons" />
+                           </styleClass>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="rental_panel" layoutX="-14.0" prefHeight="722.0" prefWidth="1114.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-14.0" AnchorPane.rightAnchor="9.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <AnchorPane layoutX="32.0" layoutY="30.0" prefHeight="152.0" prefWidth="1071.0" styleClass="carrentalpane" stylesheets="@../styles/dashboard.css">
+                     <children>
+                        <Label layoutX="24.0" layoutY="26.0" text="Car ID:">
+                           <font>
+                              <Font name="Tahoma" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="26.0" layoutY="65.0" text="Brand:">
+                           <font>
+                              <Font name="Tahoma" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="250.0" layoutY="26.0" text="First Name:">
+                           <font>
+                              <Font name="Tahoma" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="first_name" layoutX="330.0" layoutY="23.0" prefHeight="25.0" prefWidth="161.0" styleClass="carrentalfields" stylesheets="@../styles/dashboard.css" />
+                        <Label layoutX="250.0" layoutY="64.0" text="Last Name:">
+                           <font>
+                              <Font name="Tahoma" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="last_name" layoutX="330.0" layoutY="61.0" prefHeight="25.0" prefWidth="162.0" styleClass="carrentalfields" stylesheets="@../styles/dashboard.css" />
+                        <Label layoutX="271.0" layoutY="108.0" text="Gender:">
+                           <font>
+                              <Font name="Tahoma" size="14.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="rental_gender" layoutX="330.0" layoutY="105.0" prefHeight="25.0" prefWidth="161.0" promptText="select gender" styleClass="carrentalfields" stylesheets="@../styles/dashboard.css" />
+                        <Label layoutX="583.0" layoutY="26.0" text="Date Rented:">
+                           <font>
+                              <Font name="Tahoma" size="14.0" />
+                           </font>
+                        </Label>
+                        <DatePicker fx:id="date_rented" layoutX="684.0" layoutY="19.0" prefHeight="25.0" prefWidth="152.0" />
+                        <Label layoutX="580.0" layoutY="63.0" text="Date Returned:">
+                           <font>
+                              <Font name="Tahoma" size="14.0" />
+                           </font>
+                        </Label>
+                        <DatePicker fx:id="date_returned" layoutX="683.0" layoutY="55.0" prefHeight="25.0" prefWidth="152.0" styleClass="textfield" stylesheets="@../../../../../Music/CarRentalManagementSystem-main/CarRentalManagementSystem/src/carrentalmanagementsystem/dashboardDesign.css" />
+                        <Button fx:id="rent_btn" layoutX="905.0" layoutY="93.0" mnemonicParsing="false" onAction="#rent_cars" prefHeight="36.0" prefWidth="97.0" stylesheets="@../styles/dashboard.css" text="Rent" textFill="#000000e3">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="rentbtn" />
+                              <String fx:value="buttons" />
+                           </styleClass>
+                        </Button>
+                        <Label layoutX="899.0" layoutY="20.0" prefHeight="34.0" prefWidth="64.0" text="Price:">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="rental_price" layoutX="948.0" layoutY="28.0" text="1200">
+                           <font>
+                              <Font size="14.0" />
+                           </font></Label>
+                        <TextField fx:id="rental_brand" editable="false" layoutX="81.0" layoutY="63.0" prefHeight="22.0" prefWidth="155.0" styleClass="carrentalfields" stylesheets="@../styles/dashboard.css" />
+                        <TextField fx:id="rentalCar_id" editable="false" layoutX="81.0" layoutY="21.0" prefHeight="27.0" prefWidth="154.0" styleClass="carrentalfields" stylesheets="@../styles/dashboard.css" />
+                        <Button fx:id="rent_clear_btn" layoutX="792.0" layoutY="92.0" mnemonicParsing="false" onAction="#rent_clear" prefHeight="42.0" prefWidth="97.0" stylesheets="@../styles/dashboard.css" text="Clear" textFill="#000000e3">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="insertbtn" />
+                              <String fx:value="buttons" />
+                           </styleClass>
+                        </Button>
+                        <Label layoutX="27.0" layoutY="102.0" text="Email:">
+                           <font>
+                              <Font name="Tahoma" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="rental_email" layoutX="81.0" layoutY="103.0" prefHeight="25.0" prefWidth="159.0" styleClass="carrentalfields" stylesheets="@../styles/dashboard.css" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="35.0" layoutY="211.0" prefHeight="450.0" prefWidth="1018.0">
+                     <children>
+                        <ScrollPane layoutY="48.0" prefHeight="402.0" prefWidth="1068.0" styleClass="transparent" stylesheets="@../styles/dashboard.css" translateY="15.0">
+                           <content>
+                              <GridPane fx:id="gridScrollable" alignment="CENTER" hgap="20.0" prefHeight="448.0" prefWidth="1038.0" vgap="20.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <padding>
+                                    <Insets left="20.0" top="20.0" />
+                                 </padding>
+                              </GridPane>
+                           </content>
+                        </ScrollPane>
+                        <Label alignment="CENTER" layoutY="-1.0" prefHeight="51.0" prefWidth="1062.0" stylesheets="@../styles/dashboard.css" text="Available Cars">
+                           <font>
+                              <Font size="29.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="pane" />
+                              <String fx:value="availablepane" />
+                           </styleClass>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children></AnchorPane>
+            <AnchorPane fx:id="cutomers_panel" prefHeight="722.0" prefWidth="1109.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <TableView fx:id="customers_tableView" layoutX="72.0" layoutY="189.0" prefHeight="498.0" prefWidth="969.0" styleClass="table-main" stylesheets="@../styles/dashboard.css">
+                    <columns>
+                      <TableColumn fx:id="customer_col_customerid" editable="false" minWidth="70.0" prefWidth="120.0" text="Customer Id" />
+                      <TableColumn fx:id="customer_col_firstname" minWidth="70.0" prefWidth="145.0" text="Frist Name" />
+                        <TableColumn fx:id="customer_col_lastname" minWidth="70.0" prefWidth="145.0" styleClass="table-columns" text="Last Name" />
+                        <TableColumn fx:id="customer_col_gender" minWidth="70.0" prefWidth="145.0" styleClass="table-columns" text="Gender" />
+                        <TableColumn fx:id="customer_col_daterented" minWidth="70.0" prefWidth="145.0" styleClass="table-columns" text="Date Rented" />
+                        <TableColumn fx:id="customer_col_datereturned" minWidth="70.0" prefWidth="145.0" styleClass="table-columns" text="Date Returned" />
+                        <TableColumn fx:id="customer_col_carid" minWidth="70.0" prefWidth="120.0" text="Car Id">
+                           <styleClass>
+                              <String fx:value="table-columns" />
+                              <String fx:value="table-column2" />
+                           </styleClass>
+                        </TableColumn>
+                    </columns>
+                  </TableView>
+                  <AnchorPane layoutX="64.0" layoutY="9.0" prefHeight="152.0" prefWidth="970.0" styleClass="carrentalpane" stylesheets="@../styles/dashboard.css">
+                     <children>
+                        <Label layoutX="309.0" layoutY="27.0" text="First Name:">
+                           <font>
+                              <Font name="Tahoma" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="cust_first_name" layoutX="400.0" layoutY="24.0" prefHeight="25.0" prefWidth="161.0" promptText="First name" styleClass="carrentalfields" stylesheets="@../styles/dashboard.css" />
+                        <Label layoutX="312.0" layoutY="63.0" text="Last Name:">
+                           <font>
+                              <Font name="Tahoma" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="cust_last_name" layoutX="398.0" layoutY="63.0" prefHeight="25.0" prefWidth="162.0" promptText="Last name" styleClass="carrentalfields" stylesheets="@../styles/dashboard.css" />
+                        <Label layoutX="317.0" layoutY="104.0" text="Gender:">
+                           <font>
+                              <Font name="Tahoma" size="14.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="customer_gender" layoutX="400.0" layoutY="102.0" prefHeight="25.0" prefWidth="161.0" promptText="Select gender" styleClass="carrentalfields" stylesheets="@../styles/dashboard.css" />
+                        <Button fx:id="customer_update_btn" layoutX="672.0" layoutY="84.0" mnemonicParsing="false" onAction="#customer_update" prefHeight="40.0" prefWidth="98.0" stylesheets="@../styles/dashboard.css" text="Update" textFill="#000000e3">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="rentbtn" />
+                              <String fx:value="buttons" />
+                           </styleClass>
+                        </Button>
+                        <Label alignment="CENTER" layoutX="19.0" layoutY="27.0" prefHeight="20.0" prefWidth="261.0" text="Enter the customer id to edit">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="36.0" layoutY="64.0" text="Customer ID:">
+                           <font>
+                              <Font name="Tahoma" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="cust_id" layoutX="122.0" layoutY="63.0" prefHeight="25.0" prefWidth="153.0" promptText="Enter customer iD" styleClass="carrentalfields" stylesheets="@../styles/dashboard.css" />
+                        <Button fx:id="customer_delete_btn" layoutX="668.0" layoutY="28.0" mnemonicParsing="false" onAction="#customer_delete" prefHeight="36.0" prefWidth="97.0" stylesheets="@../styles/dashboard.css" text="Delete" textFill="#000000e3">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="deletebtn" />
+                              <String fx:value="buttons" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="report_btn" layoutX="780.0" layoutY="30.0" mnemonicParsing="false" onAction="#generate_report" prefHeight="29.0" prefWidth="159.0" stylesheets="@../styles/dashboard.css" text="Generate report" textFill="#000000e3">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="reportbtn" />
+                              <String fx:value="buttons" />
+                           </styleClass>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </children></AnchorPane>
+         </children>
+      </AnchorPane>
+   </center>
+   <top>
+      <AnchorPane maxHeight="57.0" prefHeight="35.0" prefWidth="1366.0" styleClass="titlebar" stylesheets="@../styles/dashboard.css" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="29.0" fitWidth="65.0" layoutX="539.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/logofalcon.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="641.0" layoutY="6.0" prefHeight="21.0" prefWidth="362.0" text="Falcon Car Rental" textFill="#d0cbcb">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="close_btn" layoutX="1310.0" mnemonicParsing="false" onAction="#close" prefHeight="24.0" prefWidth="34.0" translateX="10.0" translateY="2.0">
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/delete_10024111%20(1).png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <styleClass>
+                  <String fx:value="transparent" />
+                  <String fx:value="buttons" />
+               </styleClass>
+            </Button>
+            <Button fx:id="minimize_btn" layoutX="1259.0" mnemonicParsing="false" onAction="#minimize" prefHeight="24.0" prefWidth="34.0" translateX="15.0" translateY="2.0">
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/minus_3097250.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <styleClass>
+                  <String fx:value="transparent" />
+                  <String fx:value="buttons" />
+               </styleClass>
+            </Button>
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>
